@@ -9,7 +9,7 @@ app.use(express.json());
 const users = [];
 let refreshTokens = [];
 
-
+console.log(users)
 app.post('/users', async (req, res) => {
   try {
     const hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -37,6 +37,7 @@ app.post('/users/login', async (req, res) => {
 
       const accessToken = generateAccessToken({ name: user.name });
       res.json({ accessToken: accessToken, refreshToken: refreshToken });
+      console.log(res.json({ accessToken: accessToken, refreshToken: refreshToken }))
     } else {
       res.status(401).send('Invalid password');
     }

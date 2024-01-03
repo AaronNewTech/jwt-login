@@ -1,6 +1,6 @@
 # GET posts
 GET http://localhost:4000/posts
-Authorization: Bearer 
+Authorization: Bearer enter_access_token_here
 
 ###
 
@@ -9,7 +9,7 @@ DELETE http://localhost:3000/logout
 Content-Type: application/json
 
 {
-    "token": ""
+    "token": "enter_access_token_here"
 }
 
 ###
@@ -19,7 +19,7 @@ POST http://localhost:3000/token
 Content-Type: application/json
 
 {
-    "token": ""
+    "token": "'enter_refresh_token_here'"
 }
 
 ###
@@ -30,7 +30,7 @@ Content-Type: application/json
 
 {
     "name": "Kyle",
-    "password": ""
+    "password": "password"
 }
 
 ###
@@ -42,7 +42,7 @@ Content-Type: application/json
 
 {
     "name": "Kyle",
-    "password": ""  
+    "password": "password"  
 }
 
 ###
